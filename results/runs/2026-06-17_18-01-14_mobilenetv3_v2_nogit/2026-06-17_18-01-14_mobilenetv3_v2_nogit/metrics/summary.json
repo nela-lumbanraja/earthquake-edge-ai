@@ -1,0 +1,18 @@
+{
+    "model": "mobilenetv3_v2",
+    "best_val_acc": 0.983621865280101,
+    "baseline_test_acc": 0.9832154349476343,
+    "quantized_test_acc": 0.9826511349818954,
+    "total_params": 1525031,
+    "baseline_size_mb": 5.950514793395996,
+    "quantized_size_mb": 4.277466773986816,
+    "compression": "dynamic_quantization",
+    "compression_target": "nn.Linear",
+    "checkpoint_baseline": "/home/indra/eq_team/earthquake-classification/results/runs/2026-06-17_18-01-14_mobilenetv3_v2_nogit/checkpoints/best_mobilenetv3_v2.pt",
+    "checkpoint_quantized": "/home/indra/eq_team/earthquake-classification/results/runs/2026-06-17_18-01-14_mobilenetv3_v2_nogit/checkpoints/mobilenetv3_v2_dynamic_quantized.pt",
+    "classification_report_baseline": "/home/indra/eq_team/earthquake-classification/results/runs/2026-06-17_18-01-14_mobilenetv3_v2_nogit/metrics/classification_report_baseline.txt",
+    "classification_report_quantized": "/home/indra/eq_team/earthquake-classification/results/runs/2026-06-17_18-01-14_mobilenetv3_v2_nogit/metrics/classification_report_dynamic_quantized.txt",
+    "run_dir": "/home/indra/eq_team/earthquake-classification/results/runs/2026-06-17_18-01-14_mobilenetv3_v2_nogit",
+    "split_sha256": "b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c",
+    "split_type": "random_per_trace_v2"
+}

@@ -1,0 +1,62 @@
+
+=== 3s ===
+PNW: memmap_earthquake
+PNW: memmap_explosion
+PNW: memmap_sonic
+PNW: memmap_thunder
+PNW: memmap_surface_event
+STEAD: memmap
+STEAD: memmap_no_event
+STEAD: memmap_noise
+Total traces = 1488570
+copy -> /home/indra/indra/PNW/memmap_earthquake/waveforms_3s.npy
+copy -> /home/indra/indra/PNW/memmap_explosion/waveforms_3s.npy
+copy -> /home/indra/indra/PNW/memmap_sonic/waveforms_3s.npy
+copy -> /home/indra/indra/PNW/memmap_thunder/waveforms_3s.npy
+copy -> /home/indra/indra/PNW/memmap_surface_event/waveforms_3s.npy
+copy -> /home/indra/indra/STEAD/memmap/waveforms_3s.npy
+copy -> /home/indra/indra/STEAD/memmap_no_event/noevent_waveforms_3s.npy
+copy -> /home/indra/indra/STEAD/memmap_noise/noise_waveforms_3s.npy
+saved -> /home/indra/eq_team/combined_3s.npy
+
+=== 5s ===
+PNW: memmap_earthquake
+PNW: memmap_explosion
+PNW: memmap_sonic
+PNW: memmap_thunder
+PNW: memmap_surface_event
+STEAD: memmap
+STEAD: memmap_no_event
+STEAD: memmap_noise
+Total traces = 1488570
+copy -> /home/indra/indra/PNW/memmap_earthquake/waveforms_5s.npy
+copy -> /home/indra/indra/PNW/memmap_explosion/waveforms_5s.npy
+copy -> /home/indra/indra/PNW/memmap_sonic/waveforms_5s.npy
+copy -> /home/indra/indra/PNW/memmap_thunder/waveforms_5s.npy
+copy -> /home/indra/indra/PNW/memmap_surface_event/waveforms_5s.npy
+copy -> /home/indra/indra/STEAD/memmap/waveforms_5s.npy
+copy -> /home/indra/indra/STEAD/memmap_no_event/noevent_waveforms_5s.npy
+copy -> /home/indra/indra/STEAD/memmap_noise/noise_waveforms_5s.npy
+saved -> /home/indra/eq_team/combined_5s.npy
+
+=== 10s ===
+PNW: memmap_earthquake
+PNW: memmap_explosion
+PNW: memmap_sonic
+PNW: memmap_thunder
+PNW: memmap_surface_event
+STEAD: memmap
+STEAD: memmap_no_event
+STEAD: memmap_noise
+Total traces = 1488570
+copy -> /home/indra/indra/PNW/memmap_earthquake/waveforms_10s.npy
+copy -> /home/indra/indra/PNW/memmap_explosion/waveforms_10s.npy
+copy -> /home/indra/indra/PNW/memmap_sonic/waveforms_10s.npy
+copy -> /home/indra/indra/PNW/memmap_thunder/waveforms_10s.npy
+copy -> /home/indra/indra/PNW/memmap_surface_event/waveforms_10s.npy
+copy -> /home/indra/indra/STEAD/memmap/waveforms_10s.npy
+copy -> /home/indra/indra/STEAD/memmap_no_event/noevent_waveforms_10s.npy
+copy -> /home/indra/indra/STEAD/memmap_noise/noise_waveforms_10s.npy
+saved -> /home/indra/eq_team/combined_10s.npy
+
+✓ all complete

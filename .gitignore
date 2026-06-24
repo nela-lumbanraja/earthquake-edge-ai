@@ -1,0 +1,11 @@
+data/
+**/*.npy
+**/*.npz
+**/*.pt
+**/*.pth
+**/*.engine
+results/checkpoints/
+__pycache__/
+*.pyc
+.env
+.vscode/

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "source_label": "flatbuffer_direct",
+  "seed": 0,
+  "num_samples": 1,
+  "rtol": 0.0001,
+  "atol": 0.0001,
+  "inputs_source": "seeded_random",
+  "onnx_tflite": {
+    "report_path": "/home/indra/eq_team/earthquake-classification/models/tflite/tcn_onnx2tf/tcn_model_accuracy_report.json",
+    "target_key": "float32",
+    "evaluation_pass": true,
+    "overall_metrics": {
+      "max_abs": 7.152557373046875e-07,
+      "ref_max_abs": 2.7076385021209717,
+      "ref_rms": 1.7987695910423673,
+      "mean_abs": 2.4693352835518975e-07,
+      "rmse": 3.3186461703956255e-07,
+      "cosine_similarity": 0.9999999999999836
+    }
+  },
+  "onnx_pytorch": null,
+  "tflite_pytorch": null,
+  "reference_backend": "onnx",
+  "pytorch_backend": null
+}

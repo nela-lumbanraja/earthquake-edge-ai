@@ -1,0 +1,85 @@
+============================================================
+MobileNetV3 FINAL
+============================================================
+Device : cuda
+AMP    : True
+
+[1] Loading metadata...
+Metadata keys : dict_keys(['label', 'shape', 'dtype', 'back_azimuth_deg', 'p_arrival_sample', 'source_magnitude', 'source_distance_km', 'snr_db'])
+Unique labels : ['memmap' 'memmap_earthquake' 'memmap_explosion' 'memmap_no_event'
+ 'memmap_noise' 'memmap_sonic' 'memmap_surface_event' 'memmap_thunder']
+
+[2] Loading memmap waveform...
+Shape : (np.int64(1488570), np.int64(3), np.int64(500))
+Dtype : float32
+Total samples : 1488570
+
+[3] Encoding labels...
+Classes : ['memmap' 'memmap_earthquake' 'memmap_explosion' 'memmap_no_event'
+ 'memmap_noise' 'memmap_sonic' 'memmap_surface_event' 'memmap_thunder']
+Num classes : 8
+
+[4] Train/Val/Test split...
+Train : 1041999
+Val   : 148857
+Test  : 297714
+
+[5] Building dataloader...
+
+[6] Building MobileNetV3...
+Trainable params : 1,526,056
+
+[7] Training...
+Epoch 01/30 | Train 0.1359 0.9555 | Val 0.1033 0.9661 <-- BEST
+Epoch 02/30 | Train 0.0968 0.9682 | Val 0.1650 0.9692 <-- BEST
+Epoch 03/30 | Train 0.0873 0.9714 | Val 0.0878 0.9719 <-- BEST
+Epoch 04/30 | Train 0.0807 0.9740 | Val 0.0815 0.9737 <-- BEST
+Epoch 05/30 | Train 0.0753 0.9761 | Val 0.0815 0.9744 <-- BEST
+Epoch 06/30 | Train 0.0709 0.9776 | Val 0.0784 0.9754 <-- BEST
+Epoch 07/30 | Train 0.0677 0.9788 | Val 0.1759 0.9717
+Epoch 08/30 | Train 0.0646 0.9799 | Val 0.2069 0.8657
+Epoch 09/30 | Train 0.0615 0.9810 | Val 0.0805 0.9766 <-- BEST
+Epoch 10/30 | Train 0.0588 0.9818 | Val 0.0823 0.9764
+Epoch 11/30 | Train 0.0561 0.9828 | Val 0.1407 0.9732
+Epoch 12/30 | Train 0.0539 0.9835 | Val 0.0906 0.9758
+Epoch 13/30 | Train 0.0515 0.9843 | Val 0.0948 0.9760
+Epoch 14/30 | Train 0.0494 0.9851 | Val 0.1138 0.9755
+Epoch 15/30 | Train 0.0477 0.9857 | Val 0.1057 0.9755
+Epoch 16/30 | Train 0.0461 0.9864 | Val 0.1051 0.9758
+Epoch 17/30 | Train 0.0448 0.9868 | Val 0.1161 0.9754
+Epoch 18/30 | Train 0.0438 0.9872 | Val 0.9352 0.8670
+Epoch 19/30 | Train 0.0427 0.9876 | Val 0.1231 0.9759
+Epoch 20/30 | Train 0.0421 0.9879 | Val 0.1265 0.9758
+Epoch 21/30 | Train 0.0415 0.9881 | Val 0.1330 0.9759
+Epoch 22/30 | Train 0.0410 0.9883 | Val 0.1418 0.9757
+Epoch 23/30 | Train 0.0408 0.9884 | Val 0.1420 0.9761
+Epoch 24/30 | Train 0.0404 0.9885 | Val 0.1441 0.9762
+Epoch 25/30 | Train 0.0402 0.9886 | Val 0.1482 0.9761
+Epoch 26/30 | Train 0.0400 0.9886 | Val 0.1496 0.9760
+Epoch 27/30 | Train 0.0399 0.9887 | Val 0.1550 0.9759
+Epoch 28/30 | Train 0.0398 0.9887 | Val 0.1577 0.9759
+Epoch 29/30 | Train 0.0398 0.9887 | Val 0.1540 0.9761
+Epoch 30/30 | Train 0.0397 0.9887 | Val 0.1540 0.9763
+
+[8] Evaluation...
+                      precision    recall  f1-score   support
+
+              memmap       1.00      1.00      1.00    206046
+   memmap_earthquake       0.91      1.00      0.95     32613
+    memmap_explosion       0.00      0.00      0.00      3175
+     memmap_no_event       0.81      0.61      0.69      3290
+        memmap_noise       0.96      0.98      0.97     47085
+        memmap_sonic       0.88      0.37      0.52        41
+memmap_surface_event       0.90      0.90      0.90      5435
+      memmap_thunder       0.56      0.17      0.26        29
+
+            accuracy                           0.98    297714
+           macro avg       0.75      0.63      0.66    297714
+        weighted avg       0.97      0.98      0.97    297714
+
+
+[9] Plotting...
+
+Saved plot : /home/indra/eq_team/mobilenetv3_results.png
+Saved best : /home/indra/eq_team/best_mobilenetv3_5s.pt
+DONE

@@ -1,0 +1,48 @@
+{
+    "model": "mobilenetv2_v2",
+    "data_file": "/home/indra/eq_team/combined_5s.npy",
+    "meta_file": "/home/indra/eq_team/metadata_5s.npy",
+    "split_file": "/home/indra/eq_team/earthquake-classification/data/splits_5s.npz",
+    "split_sha256": "b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c",
+    "split_type": "random_per_trace_v2",
+    "classes": [
+        "earthquake",
+        "explosion",
+        "no_event",
+        "noise",
+        "sonic",
+        "surface_event",
+        "thunder"
+    ],
+    "label_map": {
+        "memmap": "earthquake",
+        "memmap_earthquake": "earthquake",
+        "memmap_noise": "noise",
+        "memmap_no_event": "no_event",
+        "memmap_explosion": "explosion",
+        "memmap_sonic": "sonic",
+        "memmap_thunder": "thunder",
+        "memmap_surface_event": "surface_event"
+    },
+    "batch_size": 256,
+    "epochs": 30,
+    "learning_rate": 0.0001,
+    "img_size": 224,
+    "seq_len": 500,
+    "normalization": "zscore_per_trace_joint",
+    "augmentation": [
+        "noise_injection",
+        "non_circular_time_shift",
+        "horizontal_channel_dropout"
+    ],
+    "forbidden_augmentation": [
+        "flip",
+        "roll"
+    ],
+    "compression": "dynamic_quantization",
+    "compression_target": "nn.Linear",
+    "device": "cuda",
+    "amp": true,
+    "random_seed": 42,
+    "git_commit": "nogit"
+}

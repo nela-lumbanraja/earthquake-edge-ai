@@ -1,0 +1,27 @@
+{
+  "note": "Metrik dan waktu inferensi pada bagian ini dihitung dengan KEDUA model berjalan di CPU agar perbandingan adil, karena dynamic quantization (int8) hanya didukung di CPU. Ukuran file dibandingkan menggunakan format state_dict untuk kedua model.",
+  "original_model_cpu": {
+    "accuracy": 0.9773641817314604,
+    "precision_macro": 0.6072294244441147,
+    "recall_macro": 0.5689056156934502,
+    "f1_macro": 0.5779640216169942,
+    "file_size_mb": 4.6022844314575195,
+    "inference_time_sec_total": 3486.081890106201,
+    "inference_time_ms_per_sample": 11.709499352083547,
+    "n_test_samples": 297714
+  },
+  "quantized_model_cpu": {
+    "accuracy": 0.977333951376153,
+    "balanced_accuracy": 0.5686833478345924,
+    "precision_macro": 0.6070018487811348,
+    "recall_macro": 0.5686833478345924,
+    "f1_macro": 0.5775909206168055,
+    "roc_auc_macro": 0.9809731595401395,
+    "file_size_mb": 4.507718086242676,
+    "inference_time_sec_total": 3381.2914900779724,
+    "inference_time_ms_per_sample": 11.357515904787725,
+    "n_test_samples": 297714
+  },
+  "compression_ratio_size": 1.0209787620710922,
+  "speedup_ratio_cpu_inference": 1.0309912352530755
+}

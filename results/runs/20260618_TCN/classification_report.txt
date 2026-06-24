@@ -1,0 +1,15 @@
+Classification Report - Original (FP32) Model
+=======================================================
+               precision    recall  f1-score   support
+
+   earthquake     0.9860    0.9968    0.9914    238659
+    explosion     0.7517    0.3899    0.5135      3175
+     no_event     0.7560    0.6857    0.7192      3290
+        noise     0.9850    0.9413    0.9627     47085
+        sonic     0.0000    0.0000    0.0000        41
+surface_event     0.7724    0.9689    0.8595      5435
+      thunder     0.0000    0.0000    0.0000        29
+
+     accuracy                         0.9774    297714
+    macro avg     0.6073    0.5690    0.5780    297714
+ weighted avg     0.9767    0.9774    0.9761    297714

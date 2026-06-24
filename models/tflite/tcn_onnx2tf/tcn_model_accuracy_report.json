@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "seed": 0,
+  "num_samples": 1,
+  "rtol": 0.0001,
+  "atol": 0.0001,
+  "compare_mode": "raw",
+  "has_quantized_outputs": false,
+  "inputs_source": "seeded_random",
+  "onnx_input_names": [
+    "input"
+  ],
+  "onnx_output_names": [
+    "output"
+  ],
+  "compared_output_names": [
+    "output"
+  ],
+  "skipped_output_names": [],
+  "skipped_output_reasons": {},
+  "tflite_path": "/home/indra/eq_team/earthquake-classification/models/tflite/tcn_onnx2tf/tcn_model_float32.tflite",
+  "metric_thresholds": {
+    "max_abs": 0.05,
+    "mean_abs": 0.005,
+    "rmse": 0.006,
+    "cosine_similarity": 0.999
+  },
+  "overall_metrics": {
+    "max_abs": 7.152557373046875e-07,
+    "ref_max_abs": 2.7076385021209717,
+    "ref_rms": 1.7987695910423673,
+    "mean_abs": 2.4693352835518975e-07,
+    "rmse": 3.3186461703956255e-07,
+    "cosine_similarity": 0.9999999999999836
+  },
+  "metric_threshold_judgement": {
+    "pass": true,
+    "checks": {
+      "max_abs": true,
+      "mean_abs": true,
+      "rmse": true,
+      "cosine_similarity": true
+    },
+    "effective_thresholds": {
+      "max_abs": 0.05,
+      "mean_abs": 0.005,
+      "rmse": 0.006,
+      "cosine_similarity": 0.999
+    },
+    "cosine_similarity_bypassed_for_low_energy": false
+  },
+  "allclose_summary": {
+    "matched": 1,
+    "total": 1,
+    "pass": true
+  },
+  "layout_alignment_summary": {
+    "identity": 1,
+    "transpose": 0,
+    "reshape": 0
+  },
+  "evaluation_pass": true,
+  "per_output_metrics": {
+    "output": {
+      "tflite_output_name": "output",
+      "status": "compared",
+      "reason": "",
+      "allclose": {
+        "matched": 1,
+        "total": 1,
+        "pass": true
+      },
+      "metric_threshold_judgement": {
+        "pass": true,
+        "checks": {
+          "max_abs": true,
+          "mean_abs": true,
+          "rmse": true,
+          "cosine_similarity": true
+        },
+        "effective_thresholds": {
+          "max_abs": 0.05,
+          "mean_abs": 0.005,
+          "rmse": 0.006,
+          "cosine_similarity": 0.999
+        },
+        "cosine_similarity_bypassed_for_low_energy": false
+      },
+      "layout_alignment": {
+        "identity": 1,
+        "transpose": 0,
+        "reshape": 0,
+        "permutation_counts": {}
+      },
+      "max_abs": 7.152557373046875e-07,
+      "ref_max_abs": 2.7076385021209717,
+      "ref_rms": 1.7987695910423673,
+      "mean_abs": 2.4693352835518975e-07,
+      "rmse": 3.3186461703956255e-07,
+      "cosine_similarity": 0.9999999999999836
+    }
+  }
+}

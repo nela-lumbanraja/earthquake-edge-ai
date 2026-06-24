@@ -1,0 +1,13 @@
+metric,value
+model,CNN Dynamic Quantized
+optimization_status,Setelah Optimasi
+runtime,PyTorch Dynamic Quantization
+device,HPC CPU
+model_size_mb,6.1421
+latency_mean_ms,4.6011
+latency_p95_ms,4.6823
+throughput_fps,212.1225
+mean_ram_mb,529.4676
+peak_ram_mb,529.6484
+mean_cpu_percent,71.933
+max_cpu_percent,78.6

@@ -1,0 +1,23 @@
+=======================================================
+TCN — Test Set Metrics
+=======================================================
+
+Accuracy          : 0.9717 (97.17%)
+Balanced Accuracy : 0.6417 (64.17%)
+ROC-AUC macro     : 0.9838
+
+--- Classification Report ---
+                      precision    recall  f1-score   support
+
+              memmap     0.9877    0.9883    0.9880    206046
+   memmap_earthquake     0.8974    0.9467    0.9214     32613
+    memmap_explosion     0.7560    0.5395    0.6297      3175
+     memmap_no_event     0.8947    0.7231    0.7998      3290
+        memmap_noise     0.9856    0.9645    0.9749     47085
+        memmap_sonic     0.0000    0.0000    0.0000        41
+memmap_surface_event     0.8585    0.9713    0.9114      5435
+      memmap_thunder     0.0000    0.0000    0.0000        29
+
+            accuracy                         0.9717    297714
+           macro avg     0.6725    0.6417    0.6531    297714
+        weighted avg     0.9714    0.9717    0.9711    297714

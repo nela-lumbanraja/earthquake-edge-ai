@@ -1,0 +1,6 @@
+run_name,git_commit,model,split_type,split_sha256,accuracy,balanced_accuracy,roc_auc_macro,ece,recall_eq_at_ftr5,leakage_caveat
+2026-06-20_044151_transformer_compression_nogit,nogit,transformer_teacher,random_per_trace_v2,b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c,0.1856,0.6257,0.9517,0.3599,0.9968,yes
+2026-06-20_062051_transformer_compression_nogit,nogit,transformer_teacher,random_per_trace_v2,b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c,0.1856,0.6257,0.9517,0.3599,0.9968,yes
+2026-06-20_074144_transformer_compression_nogit,nogit,transformer_teacher,random_per_trace_v2,b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c,0.1856,0.6257,0.9517,0.3599,0.9968,yes
+2026-06-22_164713_transformer_compression_nogit,nogit,transformer_teacher,random_per_trace_v2,b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c,0.1856,0.6257,0.9517,0.3599,0.9968,yes
+2026-06-22_182500_transformer_compression_nogit,nogit,transformer_teacher,random_per_trace_v2,b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c,0.1856,0.6258,0.9517,0.3599,0.9968,yes

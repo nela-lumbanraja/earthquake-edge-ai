@@ -1,0 +1,13 @@
+               precision    recall  f1-score   support
+
+   earthquake     0.9937    0.9945    0.9941    238659
+    explosion     0.7220    0.6438    0.6807      3175
+     no_event     0.8315    0.7322    0.7787      3290
+        noise     0.9711    0.9838    0.9774     47085
+        sonic     0.4762    0.4878    0.4819        41
+surface_event     0.9344    0.9218    0.9280      5435
+      thunder     0.5882    0.3448    0.4348        29
+
+     accuracy                         0.9847    297714
+    macro avg     0.7882    0.7298    0.7537    297714
+ weighted avg     0.9842    0.9847    0.9844    297714

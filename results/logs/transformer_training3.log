@@ -1,0 +1,125 @@
+============================================================
+WaveformTransformer — FINAL
+============================================================
+Device      : cuda
+AMP         : True
+NUM_WORKERS : 8
+PATCH_SIZE  : 10  → 50 tokens
+D_MODEL     : 256  → head_dim=32
+
+[1] Loading metadata...
+Metadata keys : ['label', 'shape', 'dtype', 'back_azimuth_deg', 'p_arrival_sample', 'source_magnitude', 'source_distance_km', 'snr_db']
+Unique labels : ['memmap' 'memmap_earthquake' 'memmap_explosion' 'memmap_no_event'
+ 'memmap_noise' 'memmap_sonic' 'memmap_surface_event' 'memmap_thunder']
+
+[2] Loading memmap waveform...
+Shape : (np.int64(1488570), np.int64(3), np.int64(500))
+Dtype : float32
+Total samples : 1488570
+
+[3] Encoding labels...
+Unique labels (after merge) : ['earthquake' 'memmap_explosion' 'memmap_no_event' 'memmap_noise'
+ 'memmap_sonic' 'memmap_surface_event' 'memmap_thunder']
+Classes : ['earthquake' 'memmap_explosion' 'memmap_no_event' 'memmap_noise'
+ 'memmap_sonic' 'memmap_surface_event' 'memmap_thunder']
+Num classes : 7
+
+[4] Train/Val/Test split...
+Train : 1041999  (70.0%)
+Val   : 148857   (10.0%)
+Test  : 297714  (20.0%)
+
+[5] Building dataloader...
+
+[6] Building WaveformTransformer...
+/home/indra/eq_team/earthquake-classification/scripts/training/script_transformer.py:360: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(
+Trainable params : 2,252,807
+Num tokens       : 50 (+ 1 CLS)
+
+[7] Training...
+Epoch 01/30 | LR 1.00e-05 | Train Loss 0.8493 Acc 0.8228 | Val Loss 0.7493 Acc 0.8569 <-- BEST
+Epoch 02/30 | LR 2.80e-05 | Train Loss 0.6648 Acc 0.9013 | Val Loss 0.6257 Acc 0.9255 <-- BEST
+Epoch 03/30 | LR 4.60e-05 | Train Loss 0.5980 Acc 0.9345 | Val Loss 0.5853 Acc 0.9408 <-- BEST
+Epoch 04/30 | LR 6.40e-05 | Train Loss 0.5727 Acc 0.9460 | Val Loss 0.5705 Acc 0.9461 <-- BEST
+Epoch 05/30 | LR 8.20e-05 | Train Loss 0.5570 Acc 0.9519 | Val Loss 0.5505 Acc 0.9535 <-- BEST
+Epoch 06/30 | LR 1.00e-04 | Train Loss 0.5446 Acc 0.9565 | Val Loss 0.5354 Acc 0.9607 <-- BEST
+Epoch 07/30 | LR 9.96e-05 | Train Loss 0.5339 Acc 0.9608 | Val Loss 0.5268 Acc 0.9646 <-- BEST
+Epoch 08/30 | LR 9.84e-05 | Train Loss 0.5256 Acc 0.9643 | Val Loss 0.5211 Acc 0.9654 <-- BEST
+Epoch 09/30 | LR 9.65e-05 | Train Loss 0.5188 Acc 0.9671 | Val Loss 0.5130 Acc 0.9700 <-- BEST
+Epoch 10/30 | LR 9.39e-05 | Train Loss 0.5129 Acc 0.9698 | Val Loss 0.5095 Acc 0.9718 <-- BEST
+Epoch 11/30 | LR 9.05e-05 | Train Loss 0.5082 Acc 0.9720 | Val Loss 0.5071 Acc 0.9718 <-- BEST
+Epoch 12/30 | LR 8.66e-05 | Train Loss 0.5042 Acc 0.9739 | Val Loss 0.5055 Acc 0.9732 <-- BEST
+Epoch 13/30 | LR 8.21e-05 | Train Loss 0.5012 Acc 0.9751 | Val Loss 0.4975 Acc 0.9772 <-- BEST
+Epoch 14/30 | LR 7.70e-05 | Train Loss 0.4984 Acc 0.9763 | Val Loss 0.4992 Acc 0.9764 | patience 1/7
+Epoch 15/30 | LR 7.16e-05 | Train Loss 0.4961 Acc 0.9776 | Val Loss 0.4966 Acc 0.9774 <-- BEST
+Epoch 16/30 | LR 6.58e-05 | Train Loss 0.4941 Acc 0.9784 | Val Loss 0.4955 Acc 0.9780 <-- BEST
+Epoch 17/30 | LR 5.98e-05 | Train Loss 0.4924 Acc 0.9791 | Val Loss 0.4909 Acc 0.9798 <-- BEST
+Epoch 18/30 | LR 5.36e-05 | Train Loss 0.4908 Acc 0.9799 | Val Loss 0.4908 Acc 0.9800 | patience 1/7
+Epoch 19/30 | LR 4.74e-05 | Train Loss 0.4889 Acc 0.9808 | Val Loss 0.4891 Acc 0.9809 <-- BEST
+Epoch 20/30 | LR 4.12e-05 | Train Loss 0.4875 Acc 0.9813 | Val Loss 0.4884 Acc 0.9810 <-- BEST
+Epoch 21/30 | LR 3.52e-05 | Train Loss 0.4863 Acc 0.9819 | Val Loss 0.4882 Acc 0.9814 <-- BEST
+Epoch 22/30 | LR 2.94e-05 | Train Loss 0.4852 Acc 0.9824 | Val Loss 0.4885 Acc 0.9809 | patience 1/7
+Epoch 23/30 | LR 2.40e-05 | Train Loss 0.4840 Acc 0.9830 | Val Loss 0.4875 Acc 0.9813 <-- BEST
+Epoch 24/30 | LR 1.89e-05 | Train Loss 0.4831 Acc 0.9833 | Val Loss 0.4862 Acc 0.9821 <-- BEST
+Epoch 25/30 | LR 1.44e-05 | Train Loss 0.4823 Acc 0.9837 | Val Loss 0.4874 Acc 0.9816 | patience 1/7
+Epoch 26/30 | LR 1.05e-05 | Train Loss 0.4816 Acc 0.9841 | Val Loss 0.4857 Acc 0.9824 <-- BEST
+Epoch 27/30 | LR 7.12e-06 | Train Loss 0.4811 Acc 0.9843 | Val Loss 0.4864 Acc 0.9820 | patience 1/7
+Epoch 28/30 | LR 4.48e-06 | Train Loss 0.4808 Acc 0.9844 | Val Loss 0.4857 Acc 0.9825 | patience 2/7
+Epoch 29/30 | LR 2.56e-06 | Train Loss 0.4803 Acc 0.9847 | Val Loss 0.4858 Acc 0.9825 | patience 3/7
+Epoch 30/30 | LR 1.39e-06 | Train Loss 0.4801 Acc 0.9848 | Val Loss 0.4856 Acc 0.9826 | patience 4/7
+
+[8] Evaluation on Test Set...
+
+--- Classification Report ---
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+                      precision    recall  f1-score   support
+
+          earthquake     0.9911    0.9946    0.9928    238659
+    memmap_explosion     0.7076    0.5115    0.5938      3175
+     memmap_no_event     0.8188    0.7240    0.7685      3290
+        memmap_noise     0.9771    0.9795    0.9783     47085
+        memmap_sonic     0.0000    0.0000    0.0000        41
+memmap_surface_event     0.8604    0.9185    0.8885      5435
+      memmap_thunder     0.0000    0.0000    0.0000        29
+
+            accuracy                         0.9824    297714
+           macro avg     0.6222    0.5897    0.6031    297714
+        weighted avg     0.9813    0.9824    0.9817    297714
+
+
+--- Test Set Summary ---
+  Accuracy          : 0.9824  (98.24%)
+  Balanced Accuracy : 0.5897  (58.97%)
+  Top-2 Accuracy    : 0.9975  (99.75%)
+  ROC-AUC (macro)   : 0.9776
+
+--- Per-class ROC-AUC ---
+  earthquake          : 0.9982
+  memmap_explosion    : 0.9860
+  memmap_no_event     : 0.9944
+  memmap_noise        : 0.9991
+  memmap_sonic        : 0.9447
+  memmap_surface_event: 0.9977
+  memmap_thunder      : 0.9233
+
+[9] Plotting...
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+File yang disimpan:
+  Plot    : /home/indra/eq_team/earthquake-classification/results/figures/transformer_results_final3.png
+  Model   : /home/indra/eq_team/earthquake-classification/results/checkpoints/best_transformer_5s_V3.pt
+  Metrics : /home/indra/eq_team/earthquake-classification/results/tables/transformer_test_metricsV3.txt
+  Log     : /home/indra/eq_team/earthquake-classification/results/logs/transformer_training3_log.log
+
+DONE

@@ -1,0 +1,10 @@
+metric,value
+model,MobileNetV3 Dynamic Quantized
+optimization_status,Setelah Optimasi
+model_size_mb,4.2775
+latency_mean_ms,4.3325
+latency_p95_ms,5.8777
+throughput_fps,224.9668
+mean_ram_mb,637.4194
+peak_ram_mb,637.5703
+mean_cpu_percent,65.451

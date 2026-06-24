@@ -1,0 +1,15 @@
+Classification Report - Quantized (INT8, Dynamic) Model
+=======================================================
+               precision    recall  f1-score   support
+
+   earthquake     0.9860    0.9968    0.9914    238659
+    explosion     0.7541    0.3893    0.5135      3175
+     no_event     0.7533    0.6842    0.7171      3290
+        noise     0.9851    0.9412    0.9627     47085
+        sonic     0.0000    0.0000    0.0000        41
+surface_event     0.7704    0.9693    0.8585      5435
+      thunder     0.0000    0.0000    0.0000        29
+
+     accuracy                         0.9773    297714
+    macro avg     0.6070    0.5687    0.5776    297714
+ weighted avg     0.9767    0.9773    0.9761    297714

@@ -1,0 +1,242 @@
+======================================================================
+WaveformTransformer — v4.1 (fix: backward-through-graph error)
+======================================================================
+Run dir     : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit
+Git commit  : nogit
+Device      : cuda   AMP: True   NUM_WORKERS: 0
+Taksonomi   : sonic & thunder TETAP terpisah (LABEL_MAP eksplisit)
+Normalisasi : zscore_per_trace_joint   Bandpass: False
+Imbalance   : weighted_ce
+
+[1] Loading metadata...
+Metadata keys : ['label', 'shape', 'dtype', 'back_azimuth_deg', 'p_arrival_sample', 'source_magnitude', 'source_distance_km', 'snr_db']
+Unique labels (raw) : ['memmap' 'memmap_earthquake' 'memmap_explosion' 'memmap_no_event'
+ 'memmap_noise' 'memmap_sonic' 'memmap_surface_event' 'memmap_thunder']
+
+[2] Loading memmap waveform...
+Shape : (1488570, 3, 500)  Dtype : float32
+Total samples : 1488570
+
+[3] Loading shared split (data/splits_5s.npz)...
+Memuat split: /home/indra/eq_team/earthquake-classification/data/splits_5s.npz
+  split_type   : random_per_trace_v2
+  split_sha256 : b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c
+  Classes (urutan dari split file) : ['earthquake', 'explosion', 'no_event', 'noise', 'sonic', 'surface_event', 'thunder']
+Train : 1041999  (70.0%)
+Val   : 148857   (10.0%)
+Test  : 297714  (20.0%)
+[§1.3] CAVEAT WAJIB pada semua angka run ini: split acak per-trace — berpotensi optimistis karena event leakage (lihat PANDUAN_new.md §1.3, akan diperbaiki di P2)
+
+[4] Encoding labels (LABEL_MAP kanonik, urutan = classes dari split)...
+Unique labels (after canonical map) : ['earthquake' 'explosion' 'no_event' 'noise' 'sonic' 'surface_event'
+ 'thunder']
+Classes : ['earthquake', 'explosion', 'no_event', 'noise', 'sonic', 'surface_event', 'thunder']
+Num classes : 7
+  earthquake     :  1,193,295
+  explosion      :     15,875
+  no_event       :     16,448
+  noise          :    235,426
+  sonic          :        206
+  surface_event  :     27,174
+  thunder        :        146
+
+[P1-3] Bobot kelas (1/sqrt(count), train-only):
+  earthquake     : 0.036
+  explosion      : 0.313
+  no_event       : 0.308
+  noise          : 0.081
+  sonic          : 2.752
+  surface_event  : 0.239
+  thunder        : 3.270
+
+[5] Building dataloader...
+
+[6] Building WaveformTransformer (TEACHER)...
+/home/indra/eq_team/earthquake-classification/scripts/training/script_transformer_optimasi.py:366: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers,
+Trainable params : 2,252,807
+Num tokens       : 50 (+ 1 CLS)
+
+[7] Training TEACHER...
+Epoch 01/30 | LR 1.00e-05 | Train Loss 4.5148 Acc 0.0288 | Val Loss 4.2724 Acc 0.1041 <-- BEST
+Epoch 02/30 | LR 2.80e-05 | Train Loss 4.1983 Acc 0.1159 | Val Loss 4.1338 Acc 0.1393 <-- BEST
+Epoch 03/30 | LR 4.60e-05 | Train Loss 4.1202 Acc 0.1401 | Val Loss 4.0724 Acc 0.1477 <-- BEST
+Epoch 04/30 | LR 6.40e-05 | Train Loss 4.0788 Acc 0.1490 | Val Loss 4.0381 Acc 0.1596 <-- BEST
+Epoch 05/30 | LR 8.20e-05 | Train Loss 4.0486 Acc 0.1555 | Val Loss 4.0153 Acc 0.1671 <-- BEST
+Epoch 06/30 | LR 1.00e-04 | Train Loss 4.0291 Acc 0.1604 | Val Loss 3.9988 Acc 0.1649 <-- BEST
+Epoch 07/30 | LR 9.96e-05 | Train Loss 4.0108 Acc 0.1641 | Val Loss 3.9898 Acc 0.1710 <-- BEST
+Epoch 08/30 | LR 9.84e-05 | Train Loss 3.9947 Acc 0.1673 | Val Loss 3.9887 Acc 0.1720 <-- BEST
+Epoch 09/30 | LR 9.65e-05 | Train Loss 3.9809 Acc 0.1704 | Val Loss 3.9566 Acc 0.1736 <-- BEST
+Epoch 10/30 | LR 9.39e-05 | Train Loss 3.9687 Acc 0.1732 | Val Loss 3.9503 Acc 0.1755 <-- BEST
+Epoch 11/30 | LR 9.05e-05 | Train Loss 3.9591 Acc 0.1752 | Val Loss 3.9457 Acc 0.1759 <-- BEST
+Epoch 12/30 | LR 8.66e-05 | Train Loss 3.9504 Acc 0.1770 | Val Loss 3.9334 Acc 0.1798 <-- BEST
+Epoch 13/30 | LR 8.21e-05 | Train Loss 3.9418 Acc 0.1785 | Val Loss 3.9311 Acc 0.1815 <-- BEST
+Epoch 14/30 | LR 7.70e-05 | Train Loss 3.9358 Acc 0.1795 | Val Loss 3.9266 Acc 0.1807 <-- BEST
+Epoch 15/30 | LR 7.16e-05 | Train Loss 3.9300 Acc 0.1806 | Val Loss 3.9239 Acc 0.1806 <-- BEST
+Epoch 16/30 | LR 6.58e-05 | Train Loss 3.9252 Acc 0.1813 | Val Loss 3.9237 Acc 0.1816 <-- BEST
+Epoch 17/30 | LR 5.98e-05 | Train Loss 3.9209 Acc 0.1820 | Val Loss 3.9135 Acc 0.1838 <-- BEST
+Epoch 18/30 | LR 5.36e-05 | Train Loss 3.9155 Acc 0.1827 | Val Loss 3.9097 Acc 0.1836 <-- BEST
+Epoch 19/30 | LR 4.74e-05 | Train Loss 3.9109 Acc 0.1832 | Val Loss 3.9064 Acc 0.1842 <-- BEST
+Epoch 20/30 | LR 4.12e-05 | Train Loss 3.9080 Acc 0.1838 | Val Loss 3.9064 Acc 0.1841 | patience 1/7
+Epoch 21/30 | LR 3.52e-05 | Train Loss 3.9037 Acc 0.1844 | Val Loss 3.9057 Acc 0.1851 <-- BEST
+Epoch 22/30 | LR 2.94e-05 | Train Loss 3.9006 Acc 0.1848 | Val Loss 3.9059 Acc 0.1851 | patience 1/7
+Epoch 23/30 | LR 2.40e-05 | Train Loss 3.8974 Acc 0.1852 | Val Loss 3.9030 Acc 0.1849 <-- BEST
+Epoch 24/30 | LR 1.89e-05 | Train Loss 3.8945 Acc 0.1855 | Val Loss 3.9021 Acc 0.1847 <-- BEST
+Epoch 25/30 | LR 1.44e-05 | Train Loss 3.8937 Acc 0.1856 | Val Loss 3.9012 Acc 0.1848 <-- BEST
+Epoch 26/30 | LR 1.05e-05 | Train Loss 3.8908 Acc 0.1861 | Val Loss 3.8992 Acc 0.1856 <-- BEST
+Epoch 27/30 | LR 7.12e-06 | Train Loss 3.8902 Acc 0.1863 | Val Loss 3.8988 Acc 0.1858 <-- BEST
+Epoch 28/30 | LR 4.48e-06 | Train Loss 3.8881 Acc 0.1865 | Val Loss 3.8976 Acc 0.1859 <-- BEST
+Epoch 29/30 | LR 2.56e-06 | Train Loss 3.8867 Acc 0.1868 | Val Loss 3.8987 Acc 0.1856 | patience 1/7
+Epoch 30/30 | LR 1.39e-06 | Train Loss 3.8867 Acc 0.1867 | Val Loss 3.8980 Acc 0.1857 | patience 2/7
+
+[8] Evaluation TEACHER on Test Set...
+
+--- Classification Report (TEACHER) ---
+[CAVEAT] split acak per-trace — berpotensi optimistis karena event leakage (lihat PANDUAN_new.md §1.3, akan diperbaiki di P2)
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+               precision    recall  f1-score   support
+
+   earthquake     0.0000    0.0000    0.0000    238659
+    explosion     0.5460    0.7106    0.6175      3175
+     no_event     0.6717    0.7775    0.7208      3290
+        noise     0.9798    0.9620    0.9708     47085
+        sonic     0.0811    0.4390    0.1369        41
+surface_event     0.8426    0.9397    0.8885      5435
+      thunder     0.0001    0.5517    0.0001        29
+
+     accuracy                         0.1856    297714
+    macro avg     0.4459    0.6258    0.4764    297714
+ weighted avg     0.1836    0.1856    0.1843    297714
+
+
+--- Test Set Summary (TEACHER) ---
+  Accuracy          : 0.1856 (18.56%)
+  Balanced Accuracy : 0.6258 (62.58%)
+  Top-2 Accuracy    : 0.1882 (18.82%)
+  ROC-AUC (macro)   : 0.9517
+
+--- Per-class ROC-AUC & PR-AUC (P1-4) ---
+  earthquake     : ROC-AUC=0.9983  PR-AUC=0.9993  (support=238659)
+  explosion      : ROC-AUC=0.9884  PR-AUC=0.6731  (support=3175)
+  no_event       : ROC-AUC=0.9750  PR-AUC=0.7958  (support=3290)
+  noise          : ROC-AUC=0.9981  PR-AUC=0.9939  (support=47085)
+  sonic          : ROC-AUC=0.9324  PR-AUC=0.1143  (support=41)
+  surface_event  : ROC-AUC=0.9930  PR-AUC=0.9552  (support=5435)
+  thunder        : ROC-AUC=0.7766  PR-AUC=0.0268  (support=29)
+
+--- Pandangan biner EEW: earthquake vs rest (P1-4) ---
+  Threshold (dipilih di VAL utk FTR<=5%) : 0.027
+  FTR di TEST pada threshold ini          : 4.94%
+  Recall gempa di TEST pada FTR<=5%       : 0.9968 (99.68%)
+
+--- Breakdown per-SNR (P1-4) ---
+  <10dB     : n=  25,029  acc=0.0322
+  10-20dB   : n=  63,520  acc=0.0101
+  >20dB     : n= 142,309  acc=0.0019
+
+--- Kalibrasi (ECE) ---
+  ECE (15 bins) : 0.3599
+
+[9] Plotting...
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+/home/indra/ENTER/envs/pytorch_Py12/lib/python3.12/site-packages/sklearn/metrics/_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+
+File yang disimpan (TEACHER):
+  Plot      : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/figures/transformer_results.png
+  Kalibrasi : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/figures/calibration_reliability.png
+  Model     : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/checkpoints/best_transformer_5s.pt
+  Metrics   : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/tables/transformer_test_metrics.txt
+  summary.csv (global, append) : /home/indra/eq_team/earthquake-classification/results/tables/summary.csv
+
+============================================================
+[10] Membangun STUDENT model (arsitektur efisien)
+============================================================
+/home/indra/eq_team/earthquake-classification/scripts/training/script_transformer_optimasi.py:366: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers,
+Teacher params : 2,252,807
+Student params : 81,351 (3.6% dari teacher)
+
+[11] Knowledge Distillation (training STUDENT)...
+KD Epoch 01/25 | Train Loss 1.3873 Acc 0.1023 | Val Loss 1.3058 Acc 0.1349 <-- BEST
+KD Epoch 02/25 | Train Loss 1.3110 Acc 0.1333 | Val Loss 1.2762 Acc 0.1403 <-- BEST
+KD Epoch 03/25 | Train Loss 1.2899 Acc 0.1429 | Val Loss 1.2609 Acc 0.1496 <-- BEST
+KD Epoch 04/25 | Train Loss 1.2770 Acc 0.1494 | Val Loss 1.2477 Acc 0.1610 <-- BEST
+KD Epoch 05/25 | Train Loss 1.2665 Acc 0.1539 | Val Loss 1.2364 Acc 0.1633 <-- BEST
+KD Epoch 06/25 | Train Loss 1.2570 Acc 0.1577 | Val Loss 1.2290 Acc 0.1655 <-- BEST
+KD Epoch 07/25 | Train Loss 1.2515 Acc 0.1600 | Val Loss 1.2290 Acc 0.1636 | patience 1/7
+KD Epoch 08/25 | Train Loss 1.2469 Acc 0.1618 | Val Loss 1.2199 Acc 0.1697 <-- BEST
+KD Epoch 09/25 | Train Loss 1.2437 Acc 0.1630 | Val Loss 1.2172 Acc 0.1729 <-- BEST
+KD Epoch 10/25 | Train Loss 1.2404 Acc 0.1644 | Val Loss 1.2173 Acc 0.1706 | patience 1/7
+KD Epoch 11/25 | Train Loss 1.2376 Acc 0.1654 | Val Loss 1.2147 Acc 0.1730 <-- BEST
+KD Epoch 12/25 | Train Loss 1.2354 Acc 0.1661 | Val Loss 1.2104 Acc 0.1760 <-- BEST
+KD Epoch 13/25 | Train Loss 1.2331 Acc 0.1670 | Val Loss 1.2083 Acc 0.1757 <-- BEST
+KD Epoch 14/25 | Train Loss 1.2311 Acc 0.1676 | Val Loss 1.2072 Acc 0.1765 <-- BEST
+KD Epoch 15/25 | Train Loss 1.2294 Acc 0.1682 | Val Loss 1.2058 Acc 0.1764 <-- BEST
+KD Epoch 16/25 | Train Loss 1.2281 Acc 0.1687 | Val Loss 1.2049 Acc 0.1762 <-- BEST
+KD Epoch 17/25 | Train Loss 1.2268 Acc 0.1691 | Val Loss 1.2053 Acc 0.1758 | patience 1/7
+KD Epoch 18/25 | Train Loss 1.2257 Acc 0.1695 | Val Loss 1.2028 Acc 0.1773 <-- BEST
+KD Epoch 19/25 | Train Loss 1.2249 Acc 0.1698 | Val Loss 1.2021 Acc 0.1779 <-- BEST
+KD Epoch 20/25 | Train Loss 1.2239 Acc 0.1700 | Val Loss 1.2021 Acc 0.1780 | patience 1/7
+KD Epoch 21/25 | Train Loss 1.2230 Acc 0.1705 | Val Loss 1.2021 Acc 0.1770 | patience 2/7
+KD Epoch 22/25 | Train Loss 1.2228 Acc 0.1705 | Val Loss 1.2010 Acc 0.1778 <-- BEST
+KD Epoch 23/25 | Train Loss 1.2221 Acc 0.1707 | Val Loss 1.2005 Acc 0.1784 <-- BEST
+KD Epoch 24/25 | Train Loss 1.2219 Acc 0.1709 | Val Loss 1.2002 Acc 0.1783 <-- BEST
+KD Epoch 25/25 | Train Loss 1.2221 Acc 0.1709 | Val Loss 1.2004 Acc 0.1780 | patience 1/7
+
+STUDENT (distilled) Test Accuracy : 0.1784 (17.84%)
+[CAVEAT] split acak per-trace — berpotensi optimistis karena event leakage (lihat PANDUAN_new.md §1.3, akan diperbaiki di P2)
+
+[12] Pruning STUDENT (global L1 unstructured)...
+Jumlah layer Linear yang di-prune : 7 (out_proj MultiheadAttention dikecualikan -- lihat pytorch/pytorch#69353)
+Sparsity setelah pruning : 30.00% bobot Linear = 0
+
+[12b] Fine-tuning STUDENT setelah pruning...
+Prune-FT Epoch 1/5 | Train Loss 1.2252 Acc 0.1687 | Val Loss 1.2025 Acc 0.1778
+Prune-FT Epoch 2/5 | Train Loss 1.2238 Acc 0.1701 | Val Loss 1.2023 Acc 0.1772
+Prune-FT Epoch 3/5 | Train Loss 1.2238 Acc 0.1703 | Val Loss 1.2010 Acc 0.1786
+Prune-FT Epoch 4/5 | Train Loss 1.2233 Acc 0.1703 | Val Loss 1.2002 Acc 0.1786
+Prune-FT Epoch 5/5 | Train Loss 1.2229 Acc 0.1704 | Val Loss 1.2001 Acc 0.1787
+
+STUDENT (pruned, 30% sparsity) Test Accuracy : 0.1787 (17.87%)
+
+[13] Dynamic Quantization STUDENT (INT8, nn.Linear)...
+/home/indra/eq_team/earthquake-classification/scripts/training/script_transformer_optimasi.py:1151: DeprecationWarning: torch.ao.quantization is deprecated and will be removed in 2.10. 
+For migrations of users: 
+1. Eager mode quantization (torch.ao.quantization.quantize, torch.ao.quantization.quantize_dynamic), please migrate to use torchao eager mode quantize_ API instead 
+2. FX graph mode quantization (torch.ao.quantization.quantize_fx.prepare_fx,torch.ao.quantization.quantize_fx.convert_fx, please migrate to use torchao pt2e quantization API instead (prepare_pt2e, convert_pt2e) 
+3. pt2e quantization has been migrated to torchao (https://github.com/pytorch/ao/tree/main/torchao/quantization/pt2e) 
+see https://github.com/pytorch/ao/issues/2259 for more details
+  quantized_student = torch.quantization.quantize_dynamic(student_cpu, {nn.Linear}, dtype=torch.qint8)
+STUDENT (quantized INT8) Test Accuracy : 0.1777 (17.77%)
+
+[14] Benchmark perbandingan semua varian model...
+/home/indra/eq_team/earthquake-classification/scripts/training/script_transformer_optimasi.py:366: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers,
+
+============================================================
+RINGKASAN KOMPRESI  [split acak per-trace — berpotensi optimistis karena event leakage (lihat PANDUAN_new.md §1.3, akan diperbaiki di P2)]
+============================================================
+Model                                  Params   Test Acc  Size (MB)  Lat@bs1 (ms)  Lat@bs32 (ms)  Lat@bs256 (ms)
+Teacher (FP32)                      2,252,807     0.1856     10.618            1.56           13.22          146.24
+Student-Distilled (FP32)               81,351     0.1784      0.826            1.24            1.36            3.06
+Student-Pruned (30% sparsity)          81,351     0.1787      0.826            0.92            0.85            2.98
+Student-Quantized (INT8)               34,112     0.1777      0.696            0.66            1.41            3.41
+
+File yang disimpan (KOMPRESI):
+  Student (distilled) : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/checkpoints/student_distilled.pt
+  Student (pruned)    : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/checkpoints/student_pruned.pt
+  Student (quantized) : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/checkpoints/student_quantized.pt
+  Ringkasan kompresi  : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/tables/compression_comparison.txt
+  Log                 : /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit/logs/transformer_run.log
+  Semua artefak run ini ada di: /home/indra/eq_team/earthquake-classification/results/runs/2026-06-22_182500_transformer_compression_nogit
+
+DONE

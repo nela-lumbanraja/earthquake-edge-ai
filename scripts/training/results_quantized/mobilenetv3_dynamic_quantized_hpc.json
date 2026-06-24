@@ -1,0 +1,27 @@
+{
+    "timestamp": "2026-06-24T01:50:04.726259",
+    "device": "HPC CPU",
+    "runtime": "PyTorch Dynamic Quantization",
+    "model": "MobileNetV3 Dynamic Quantized",
+    "optimization_status": "Setelah Optimasi",
+    "model_path": "/home/indra/eq_team/earthquake-classification/results/runs/2026-06-17_18-01-14_mobilenetv3_v2_nogit/2026-06-17_18-01-14_mobilenetv3_v2_nogit/checkpoints/mobilenetv3_v2_dynamic_quantized.pt",
+    "model_size_mb": 4.2775,
+    "latency_ms": {
+        "mean": 4.3325,
+        "median": 3.8482,
+        "min": 3.6733,
+        "max": 6.2452,
+        "std": 0.8411,
+        "p95": 5.8777,
+        "p99": 6.1194
+    },
+    "throughput_fps": 224.9668,
+    "memory_mb": {
+        "mean_ram": 637.4194,
+        "peak_ram": 637.5703
+    },
+    "cpu_percent": {
+        "mean": 65.451,
+        "max": 75.0
+    }
+}

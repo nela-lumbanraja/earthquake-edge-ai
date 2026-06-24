@@ -1,0 +1,12 @@
+{
+  "device_used_for_eval": "cuda",
+  "accuracy": 0.9773675406598279,
+  "balanced_accuracy": 0.5689506100691533,
+  "precision_macro": 0.6073027567651826,
+  "recall_macro": 0.5689506100691533,
+  "f1_macro": 0.5780341684666502,
+  "roc_auc_macro": 0.9812912509203194,
+  "inference_time_sec_total": 18.393867015838623,
+  "inference_time_ms_per_sample": 0.06178368170740584,
+  "n_test_samples": 297714
+}

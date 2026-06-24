@@ -1,0 +1,43 @@
+============================================================
+WaveformTransformer (Teacher) — Test Set Metrics
+============================================================
+Split type   : random_per_trace_v2
+Split SHA256 : b731327519f228f8f7fd59d3616b71af3f2833e10e0a67163c60c8c9df91a09c
+CAVEAT       : split acak per-trace — berpotensi optimistis karena event leakage (lihat PANDUAN_new.md §1.3, akan diperbaiki di P2)
+Git commit   : nogit
+
+Accuracy          : 0.1856 (18.56%)
+Balanced Accuracy : 0.6258 (62.58%)
+Top-2 Accuracy    : 0.1882 (18.82%)
+ROC-AUC (macro)   : 0.9517
+ECE (15 bins)     : 0.3599
+Recall gempa @ FTR<=5% (test) : 0.9968  (threshold=0.027, FTR aktual=4.94%)
+
+--- Per-class ROC-AUC / PR-AUC ---
+  earthquake     : ROC-AUC=0.9983  PR-AUC=0.9993
+  explosion      : ROC-AUC=0.9884  PR-AUC=0.6731
+  no_event       : ROC-AUC=0.9750  PR-AUC=0.7958
+  noise          : ROC-AUC=0.9981  PR-AUC=0.9939
+  sonic          : ROC-AUC=0.9324  PR-AUC=0.1143
+  surface_event  : ROC-AUC=0.9930  PR-AUC=0.9552
+  thunder        : ROC-AUC=0.7766  PR-AUC=0.0268
+
+--- Breakdown per-SNR ---
+  <10dB     : n=25,029  acc=0.0322
+  10-20dB   : n=63,520  acc=0.0101
+  >20dB     : n=142,309  acc=0.0019
+
+--- Classification Report ---
+               precision    recall  f1-score   support
+
+   earthquake     0.0000    0.0000    0.0000    238659
+    explosion     0.5460    0.7106    0.6175      3175
+     no_event     0.6717    0.7775    0.7208      3290
+        noise     0.9798    0.9620    0.9708     47085
+        sonic     0.0811    0.4390    0.1369        41
+surface_event     0.8426    0.9397    0.8885      5435
+      thunder     0.0001    0.5517    0.0001        29
+
+     accuracy                         0.1856    297714
+    macro avg     0.4459    0.6258    0.4764    297714
+ weighted avg     0.1836    0.1856    0.1843    297714

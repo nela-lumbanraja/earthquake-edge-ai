@@ -1,0 +1,13 @@
+CNN5s Revised Training Summary
+========================================
+Run dir: /home/indra/eq_team/earthquake-classification/results/runs/20260617_201329_CNN5s
+Data file: /home/indra/eq_team/combined_5s.npy
+Meta file: /home/indra/eq_team/metadata_5s.npy
+Split file: /home/indra/eq_team/earthquake-classification/data/splits_5s.npz
+Classes: ['earthquake', 'explosion', 'no_event', 'noise', 'sonic', 'surface_event', 'thunder']
+Train/Val/Test: 1041999/148857/297714
+Best val acc: 0.982715
+Best model: /home/indra/eq_team/earthquake-classification/results/runs/20260617_201329_CNN5s/checkpoints/best_cnn_5s.pt
+Quantized model: /home/indra/eq_team/earthquake-classification/results/runs/20260617_201329_CNN5s/checkpoints/best_cnn_5s_dynamic_quantized.pt
+Plot: /home/indra/eq_team/earthquake-classification/results/runs/20260617_201329_CNN5s/figures/cnn_5s_results.png
+Report: /home/indra/eq_team/earthquake-classification/results/runs/20260617_201329_CNN5s/reports/classification_report.txt

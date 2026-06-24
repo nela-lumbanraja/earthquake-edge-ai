@@ -1,0 +1,26 @@
+{
+    "timestamp": "2026-06-24T02:12:46.790373",
+    "device": "HPC CPU",
+    "runtime": "PyTorch Dynamic Quantization",
+    "model": "CNN Dynamic Quantized",
+    "optimization_status": "Setelah Optimasi",
+    "model_path": "/home/indra/eq_team/earthquake-classification/results/runs/20260617_201329_CNN5s/checkpoints/best_cnn_5s_dynamic_quantized.pt",
+    "model_size_mb": 6.1421,
+    "latency_ms": {
+        "mean": 4.6011,
+        "median": 4.6089,
+        "min": 4.3272,
+        "max": 4.8264,
+        "std": 0.0709,
+        "p95": 4.6823
+    },
+    "throughput_fps": 212.1225,
+    "memory_mb": {
+        "mean_ram": 529.4676,
+        "peak_ram": 529.6484
+    },
+    "cpu_percent": {
+        "mean": 71.933,
+        "max": 78.6
+    }
+}

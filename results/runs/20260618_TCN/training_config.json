@@ -1,0 +1,71 @@
+{
+  "data_file": "/home/indra/eq_team/combined_5s.npy",
+  "meta_file": "/home/indra/eq_team/metadata_5s.npy",
+  "split_file": "data/splits_5s.npz",
+  "classes": [
+    "earthquake",
+    "explosion",
+    "no_event",
+    "noise",
+    "sonic",
+    "surface_event",
+    "thunder"
+  ],
+  "label_map": {
+    "memmap": "earthquake",
+    "memmap_earthquake": "earthquake",
+    "memmap_noise": "noise",
+    "memmap_no_event": "no_event",
+    "memmap_explosion": "explosion",
+    "memmap_sonic": "sonic",
+    "memmap_thunder": "thunder",
+    "memmap_surface_event": "surface_event"
+  },
+  "channel_order_assumed": [
+    "Z",
+    "N",
+    "E"
+  ],
+  "horizontal_channels": [
+    "N",
+    "E"
+  ],
+  "vertical_channels": [
+    "Z"
+  ],
+  "batch_size": 256,
+  "epochs": 30,
+  "lr": 0.0001,
+  "seq_len": 500,
+  "tcn_channels": [
+    64,
+    128,
+    128,
+    256
+  ],
+  "kernel_size": 7,
+  "dropout": 0.2,
+  "warmup_epochs": 5,
+  "early_stopping": true,
+  "patience": 7,
+  "min_delta": 0.0001,
+  "augmentation": {
+    "noise_std": 0.02,
+    "noise_prob": 0.5,
+    "shift_range_samples": 20,
+    "shift_prob": 0.5,
+    "channel_dropout_block_prob": 0.5,
+    "channel_dropout_rate_per_channel": 0.3,
+    "applies_to": "train only"
+  },
+  "optimizer": "AdamW",
+  "weight_decay": 0.001,
+  "scheduler": "LinearLR warmup -> CosineAnnealingLR",
+  "loss_function": "CrossEntropyLoss(label_smoothing=0.05)",
+  "device": "cuda",
+  "amp": true,
+  "num_train": 1041999,
+  "num_val": 148857,
+  "num_test": 297714,
+  "trainable_params": 1198407
+}
