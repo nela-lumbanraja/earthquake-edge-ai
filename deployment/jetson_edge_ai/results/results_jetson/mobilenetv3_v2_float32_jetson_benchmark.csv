@@ -1,0 +1,15 @@
+metric,value
+model_path,/home/jetson/Documents/eq_team/edge_ai/models/tflite/mobilenetv3_v2_float32.tflite
+model_size_mb,5.8466
+latency_mean_ms,9.3597
+latency_median_ms,9.3325
+latency_p95_ms,9.4485
+latency_p99_ms,9.531
+throughput_fps,106.7835
+mean_ram_mb,62.8047
+peak_ram_mb,62.8047
+cpu_percent_mean,20.2
+chip_model,NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super
+total_ram_mb,7607.38
+jetpack_l4t_version,36.5.0-20260115194252
+os,Linux-5.15.185-tegra-aarch64-with-glibc2.35

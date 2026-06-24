@@ -1,0 +1,26 @@
+{
+    "timestamp": "2026-06-24T02:50:54.059576",
+    "device": "NVIDIA Jetson",
+    "runtime": "PyTorch CPU",
+    "model": "CNN Baseline",
+    "optimization_status": "Sebelum Optimasi",
+    "model_size_mb": 6.5197,
+    "latency_ms": {
+        "mean": 47.0725,
+        "median": 43.4394,
+        "min": 41.2818,
+        "max": 74.9482,
+        "std": 8.9293,
+        "p95": 72.9864,
+        "p99": 74.3504
+    },
+    "throughput_fps": 20.9004,
+    "memory_mb": {
+        "mean_ram": 540.2695,
+        "peak_ram": 540.2695
+    },
+    "cpu_percent": {
+        "mean": 86.542,
+        "max": 92.9
+    }
+}

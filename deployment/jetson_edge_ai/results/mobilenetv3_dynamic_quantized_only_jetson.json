@@ -1,0 +1,9 @@
+{
+    "timestamp": "2026-06-24T01:22:54.521636",
+    "device": "NVIDIA Jetson",
+    "runtime": "PyTorch Dynamic Quantization",
+    "model": "MobileNetV3 Dynamic Quantized",
+    "optimization_status": "Setelah Optimasi",
+    "status": "failed",
+    "error": "RuntimeError: unknown architecure"
+}

@@ -1,0 +1,15 @@
+{
+  "model": "TCN",
+  "runtime": "TensorRT",
+  "precision": "FP16",
+  "device": "Jetson Orin Nano",
+  "engine_file": "models/onnx/tcn_model_fp16.engine",
+  "throughput_qps": 1525.96,
+  "mean_latency_ms": 0.671629,
+  "median_latency_ms": 0.670898,
+  "p90_latency_ms": 0.67627,
+  "p95_latency_ms": 0.678101,
+  "p99_latency_ms": 0.682648,
+  "gpu_mean_ms": 0.651406,
+  "gpu_median_ms": 0.650391
+}

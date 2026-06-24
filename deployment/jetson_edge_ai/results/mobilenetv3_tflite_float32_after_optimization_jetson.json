@@ -1,0 +1,39 @@
+{
+    "timestamp": "2026-06-24T01:04:14.852322",
+    "device": "NVIDIA Jetson",
+    "runtime": "LiteRT / TFLite",
+    "model": "MobileNetV3 TFLite Float32",
+    "optimization_status": "Setelah Optimasi",
+    "model_path": "/home/jetson/Documents/eq_team/edge_ai/models/tflite/mobilenetv3_v2_float32.tflite",
+    "model_size_mb": 5.8466,
+    "input_shape": [
+        1,
+        224,
+        224,
+        3
+    ],
+    "output_shape": [
+        1,
+        7
+    ],
+    "num_warmup": 10,
+    "num_runs": 100,
+    "latency_ms": {
+        "mean": 9.3264,
+        "median": 9.3206,
+        "min": 9.2685,
+        "max": 9.4728,
+        "std": 0.0378,
+        "p95": 9.411,
+        "p99": 9.4387
+    },
+    "throughput_fps": 100.8031,
+    "memory_mb": {
+        "mean_ram": 59.8789,
+        "peak_ram": 59.8789
+    },
+    "cpu_percent": {
+        "mean": 17.897,
+        "max": 42.9
+    }
+}

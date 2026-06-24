@@ -1,0 +1,15 @@
+metric,value
+throughput_qps,2377.02
+latency_mean_ms,0.419678
+latency_median_ms,0.419678
+latency_p95_ms,0.419678
+latency_p95_ms,0.252075
+latency_mean_ms,0.00415039
+latency_median_ms,0.00415039
+latency_p95_ms,0.00415039
+latency_p95_ms,0.405273
+gpu_compute_time_ms,0.405273
+latency_mean_ms,0.00488281
+latency_median_ms,0.00488281
+latency_p95_ms,0.00488281
+total_gpu_compute_time_s,2.97333

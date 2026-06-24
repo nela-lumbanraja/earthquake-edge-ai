@@ -1,0 +1,12 @@
+metric,value
+model_size_mb,8.4798
+latency_mean_ms,33.7815
+latency_median_ms,33.781
+latency_min_ms,33.7223
+latency_max_ms,33.8867
+latency_std_ms,0.0346
+fps,29.602
+mean_ram_mb,68.2852
+peak_ram_mb,68.2852
+mean_cpu_percent,18.172
+max_cpu_percent,38.1

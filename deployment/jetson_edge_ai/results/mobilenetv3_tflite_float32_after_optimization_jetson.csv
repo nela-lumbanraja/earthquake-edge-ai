@@ -1,0 +1,13 @@
+metric,value
+model,MobileNetV3 TFLite Float32
+optimization_status,Setelah Optimasi
+runtime,LiteRT / TFLite
+device,NVIDIA Jetson
+model_size_mb,5.8466
+latency_mean_ms,9.3264
+latency_p95_ms,9.411
+throughput_fps,100.8031
+mean_ram_mb,59.8789
+peak_ram_mb,59.8789
+mean_cpu_percent,17.897
+max_cpu_percent,42.9

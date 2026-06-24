@@ -1,0 +1,2 @@
+model,runtime,precision,device,engine_file,throughput_qps,mean_latency_ms,median_latency_ms,p90_latency_ms,p95_latency_ms,p99_latency_ms,gpu_mean_ms,gpu_median_ms
+TCN,TensorRT,FP16,Jetson Orin Nano,models/onnx/tcn_model_fp16.engine,1525.96,0.671629,0.670898,0.67627,0.678101,0.682648,0.651406,0.650391

@@ -1,0 +1,12 @@
+metric,value
+model,CNN Baseline
+runtime,PyTorch CPU
+device,NVIDIA Jetson
+model_size_mb,6.5197
+latency_mean_ms,47.0725
+latency_p95_ms,72.9864
+throughput_fps,20.9004
+mean_ram_mb,540.2695
+peak_ram_mb,540.2695
+mean_cpu_percent,86.542
+max_cpu_percent,92.9

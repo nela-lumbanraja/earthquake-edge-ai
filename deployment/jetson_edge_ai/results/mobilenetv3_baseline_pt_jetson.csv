@@ -1,0 +1,13 @@
+metric,value
+model,MobileNetV3 Baseline
+optimization_status,Sebelum Optimasi
+runtime,PyTorch CPU
+device,NVIDIA Jetson
+model_size_mb,5.9505
+latency_mean_ms,41.5031
+latency_p95_ms,87.6937
+throughput_fps,23.6772
+mean_ram_mb,630.6367
+peak_ram_mb,630.6367
+mean_cpu_percent,85.072
+max_cpu_percent,94.4

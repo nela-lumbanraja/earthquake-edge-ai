@@ -1,0 +1,7 @@
+metric,value
+model,MobileNetV3 Dynamic Quantized
+optimization_status,Setelah Optimasi
+runtime,PyTorch Dynamic Quantization
+device,NVIDIA Jetson
+status,failed
+error,RuntimeError: unknown architecure

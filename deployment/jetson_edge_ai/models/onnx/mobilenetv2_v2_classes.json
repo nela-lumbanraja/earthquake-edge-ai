@@ -1,0 +1,11 @@
+{
+  "classes": [
+    "earthquake",
+    "explosion",
+    "no_event",
+    "noise",
+    "sonic",
+    "surface_event",
+    "thunder"
+  ]
+}
