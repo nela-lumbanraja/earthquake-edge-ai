@@ -86,3 +86,211 @@ CNN, MobileNetV2, dan MobileNetV3: checkpoint + confusion matrix tersimpan di
 > Balanced accuracy rendah (~58%) karena kelas minoritas (`explosion`, `sonic`,
 > `thunder` — masing-masing < 3.2k, bahkan < 50 sampel) hampir tidak terdeteksi.
 > Strategi penanganan: lihat §8.2 PANDUAN.
+## Hasil Output dan Evaluasi Model
+
+Bagian ini menampilkan hasil training, evaluasi, confusion matrix, dan visualisasi dari setiap model yang digunakan pada project klasifikasi sinyal seismik.
+
+---
+
+### CNN
+
+#### CNN Results
+
+![CNN Results](results/figures/cnn_5s_results.png)
+
+#### CNN Results V2
+
+![CNN Results V2](results/figures/cnn_5s_results_v2.png)
+
+---
+
+### MobileNetV2
+
+#### MobileNetV2 Results
+
+![MobileNetV2 Results](results/figures/mobilenetv2_results.png)
+
+#### MobileNetV2 Results V2
+
+![MobileNetV2 Results V2](results/figures/mobilenetv2_results_v2.png)
+
+---
+
+### MobileNetV3
+
+#### MobileNetV3 Results
+
+![MobileNetV3 Results](results/figures/mobilenetv3_results.png)
+
+#### MobileNetV3 Results V2
+
+![MobileNetV3 Results V2](results/figures/mobilenetv3_results_v2.png)
+
+#### MobileNetV3 Results V3
+
+![MobileNetV3 Results V3](results/figures/mobilenetv3_results_v3.png)
+
+---
+
+### TCN
+
+#### TCN Results Final
+
+![TCN Results Final](results/figures/tcn_results_final.png)
+
+---
+
+### Transformer
+
+#### Transformer Results Final 3
+
+![Transformer Results Final 3](results/figures/transformer_results_final3.png)
+
+---
+
+### Evaluasi Dynamic Quantization
+
+Dynamic quantization digunakan untuk mengurangi ukuran model dan meningkatkan efisiensi inferensi pada perangkat edge.
+
+#### Confusion Matrix Dynamic Quantized
+
+![Confusion Matrix Dynamic Quantized](results/dynamic_quant_evaluation/confusion_matrix_dynamic_quantized.png)
+
+File evaluasi:
+
+* [Classification Report Dynamic Quantized](results/dynamic_quant_evaluation/classification_report_dynamic_quantized.txt)
+* Checkpoint model: `results/dynamic_quant_evaluation/best_cnn_5s_dynamic_quantized.pt`
+
+---
+
+### Evaluasi Tambahan
+
+#### Explosion Fix Verification
+
+![Explosion Fix Verification](results/figures/explosion_fix_verification.png)
+
+#### Explosion Zero Diagnosis
+
+![Explosion Zero Diagnosis](results/figures/explosion_zero_diagnosis.png)
+
+---
+
+## Ringkasan File Hasil
+
+| Jenis Hasil                        | Path                                                                           |
+| ---------------------------------- | ------------------------------------------------------------------------------ |
+| CNN Results                        | `results/figures/cnn_5s_results.png`                                           |
+| CNN Results V2                     | `results/figures/cnn_5s_results_v2.png`                                        |
+| MobileNetV2 Results                | `results/figures/mobilenetv2_results.png`                                      |
+| MobileNetV2 Results V2             | `results/figures/mobilenetv2_results_v2.png`                                   |
+| MobileNetV3 Results                | `results/figures/mobilenetv3_results.png`                                      |
+| MobileNetV3 Results V2             | `results/figures/mobilenetv3_results_v2.png`                                   |
+| MobileNetV3 Results V3             | `results/figures/mobilenetv3_results_v3.png`                                   |
+| TCN Results Final                  | `results/figures/tcn_results_final.png`                                        |
+| Transformer Results Final 3        | `results/figures/transformer_results_final3.png`                               |
+| Dynamic Quantized Report           | `results/dynamic_quant_evaluation/classification_report_dynamic_quantized.txt` |
+| Dynamic Quantized Confusion Matrix | `results/dynamic_quant_evaluation/confusion_matrix_dynamic_quantized.png`      |
+## Hasil Output dan Evaluasi Model
+
+Bagian ini menampilkan hasil training, evaluasi, confusion matrix, dan visualisasi dari setiap model yang digunakan pada project klasifikasi sinyal seismik.
+
+---
+
+### CNN
+
+#### CNN Results
+
+![CNN Results](results/figures/cnn_5s_results.png)
+
+#### CNN Results V2
+
+![CNN Results V2](results/figures/cnn_5s_results_v2.png)
+
+---
+
+### MobileNetV2
+
+#### MobileNetV2 Results
+
+![MobileNetV2 Results](results/figures/mobilenetv2_results.png)
+
+#### MobileNetV2 Results V2
+
+![MobileNetV2 Results V2](results/figures/mobilenetv2_results_v2.png)
+
+---
+
+### MobileNetV3
+
+#### MobileNetV3 Results
+
+![MobileNetV3 Results](results/figures/mobilenetv3_results.png)
+
+#### MobileNetV3 Results V2
+
+![MobileNetV3 Results V2](results/figures/mobilenetv3_results_v2.png)
+
+#### MobileNetV3 Results V3
+
+![MobileNetV3 Results V3](results/figures/mobilenetv3_results_v3.png)
+
+---
+
+### TCN
+
+#### TCN Results Final
+
+![TCN Results Final](results/figures/tcn_results_final.png)
+
+---
+
+### Transformer
+
+#### Transformer Results Final 3
+
+![Transformer Results Final 3](results/figures/transformer_results_final3.png)
+
+---
+
+### Evaluasi Dynamic Quantization
+
+Dynamic quantization digunakan untuk mengurangi ukuran model dan meningkatkan efisiensi inferensi pada perangkat edge.
+
+#### Confusion Matrix Dynamic Quantized
+
+![Confusion Matrix Dynamic Quantized](results/dynamic_quant_evaluation/confusion_matrix_dynamic_quantized.png)
+
+File evaluasi:
+
+* [Classification Report Dynamic Quantized](results/dynamic_quant_evaluation/classification_report_dynamic_quantized.txt)
+* Checkpoint model: `results/dynamic_quant_evaluation/best_cnn_5s_dynamic_quantized.pt`
+
+---
+
+### Evaluasi Tambahan
+
+#### Explosion Fix Verification
+
+![Explosion Fix Verification](results/figures/explosion_fix_verification.png)
+
+#### Explosion Zero Diagnosis
+
+![Explosion Zero Diagnosis](results/figures/explosion_zero_diagnosis.png)
+
+---
+
+## Ringkasan File Hasil
+
+| Jenis Hasil                        | Path                                                                           |
+| ---------------------------------- | ------------------------------------------------------------------------------ |
+| CNN Results                        | `results/figures/cnn_5s_results.png`                                           |
+| CNN Results V2                     | `results/figures/cnn_5s_results_v2.png`                                        |
+| MobileNetV2 Results                | `results/figures/mobilenetv2_results.png`                                      |
+| MobileNetV2 Results V2             | `results/figures/mobilenetv2_results_v2.png`                                   |
+| MobileNetV3 Results                | `results/figures/mobilenetv3_results.png`                                      |
+| MobileNetV3 Results V2             | `results/figures/mobilenetv3_results_v2.png`                                   |
+| MobileNetV3 Results V3             | `results/figures/mobilenetv3_results_v3.png`                                   |
+| TCN Results Final                  | `results/figures/tcn_results_final.png`                                        |
+| Transformer Results Final 3        | `results/figures/transformer_results_final3.png`                               |
+| Dynamic Quantized Report           | `results/dynamic_quant_evaluation/classification_report_dynamic_quantized.txt` |
+| Dynamic Quantized Confusion Matrix | `results/dynamic_quant_evaluation/confusion_matrix_dynamic_quantized.png`      |
